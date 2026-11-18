@@ -1,0 +1,25 @@
+SI EL BOT DE TELEGRAM NO FUNCIONA, REVISA EN ESTE ORDEN
+======================================================
+
+0. Ejecuta cloudflare-worker/probar-telegram.ps1 (clic derecho > Ejecutar con PowerShell).
+   Comprueba el token, te muestra el chat_id correcto y manda un mensaje de prueba.
+
+1. script.js: API_NOTIFICACIONES debe tener la URL real del Worker (https://...workers.dev),
+   ya no el texto PEGA_AQUI_LA_URL_DE_TU_CLOUDFLARE_WORKER. Si sigue el texto de ejemplo, el
+   navegador nunca llega a llamar al Worker. Esta era la causa mas comun.
+
+2. Worker desplegado: pega todo cloudflare-worker/worker.js en el editor del Worker y pulsa Deploy.
+   Luego abre la URL del Worker en el navegador: debe mostrar
+   {"ok":true,"worker":"activo","tieneToken":true,"tieneChatId":true,...}
+   Si tieneToken o tieneChatId sale false, faltan las variables en Settings > Variables and Secrets.
+
+3. TELEGRAM_CHAT_ID: debe ser el numero del chat de quien RECIBE los avisos (no el telefono).
+   Esa persona debe haber pulsado START en el bot. Si no, Telegram responde "chat not found".
+
+4. Si falla, abre la pagina, pulsa F12 > Consola y responde: ahi aparece el motivo exacto
+   (por ejemplo "chat not found" o "Unauthorized" si el token es incorrecto).
+
+5. Si cambias variables en Cloudflare, vuelve a desplegar (Deploy).
+
+OPCIONAL: para que solo tu pagina pueda usar el Worker, agrega la variable ALLOWED_ORIGIN
+con el origen de tu GitHub Pages, por ejemplo https://tuusuario.github.io (sin barra final ni ruta).

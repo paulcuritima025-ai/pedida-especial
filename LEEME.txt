@@ -1,0 +1,29 @@
+PEDIDA ESPECIAL - ANGEL Y ADRIANA
+=================================
+
+1. Abre esta carpeta en Visual Studio Code.
+2. Para probarla, instala la extensión Live Server.
+3. Haz clic derecho en index.html y selecciona "Open with Live Server".
+
+PERSONALIZACIÓN
+---------------
+- Los nombres configurados son Angel y Adriana. Si los cambias, actualízalos
+  también en las constantes de nombres de script.js.
+- Reemplaza las imágenes de ejemplo por fotografías propias.
+- Coloca tu canción en assets/ y revisa la ruta del audio en index.html.
+- Si no agregas música, el resto de la página seguirá funcionando.
+
+PARA PUBLICAR Y CREAR EL QR
+---------------------------
+Primero publica los archivos en un hosting estático, por ejemplo GitHub Pages.
+Sube el contenido de esta carpeta (index.html, style.css, script.js y assets),
+no solamente el archivo ZIP. Cuando GitHub Pages te dé una URL pública, genera
+un código QR que apunte exactamente a esa URL. No se puede crear el QR final
+antes de conocer la dirección publicada.
+
+NOTIFICACIONES GRATIS CON TELEGRAM
+----------------------------------
+La integración utiliza Telegram y Cloudflare Worker. Sigue las instrucciones
+de cloudflare-worker/LEEME-TELEGRAM.txt y reemplaza en script.js la URL de ejemplo
+por la URL pública de tu Worker. El chico debe iniciar el bot desde Telegram.
+No coloques el token de Telegram en los archivos públicos ni en GitHub.

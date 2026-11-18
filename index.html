@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090607">
+  <title>Una pregunta para ti ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player" id="player">
+    <video id="musica" src="assets/cancion.mp4#t=0.1" loop playsinline preload="metadata"></video>
+    <button id="control-musica" class="music-btn" type="button" aria-label="Reproducir música">
+      <span class="eq"><i></i><i></i><i></i></span><span id="texto-musica">Música</span>
+    </button>
+  </div>
+  <div class="corazones" id="corazones" aria-hidden="true"></div>
+
+  <main>
+    <section id="bienvenida" class="pantalla activa">
+      <div class="contenido bienvenida-contenido">
+        <span class="decoracion">🥀</span>
+        <p class="subtitulo">TENGO ALGO ESPECIAL PARA TI</p>
+        <h1>Una pequeña<br><em>sorpresa para ti</em></h1>
+        <p class="descripcion">Hay cosas que el corazón quiere decir...<br>y hoy quiero compartir una contigo.</p>
+        <button class="boton-principal" id="comenzar">Descubrir sorpresa <span>♥</span></button>
+        <p class="firma">Con cariño, Angel.</p>
+      </div>
+    </section>
+
+    <section id="historia" class="pantalla">
+      <div class="contenido">
+        <p class="subtitulo">UN SENTIMIENTO ESPECIAL</p>
+        <h2>Desde que llegaste...</h2>
+        <p class="texto-romantico">No sé exactamente en qué momento comenzó, pero poco a poco te convertiste en alguien que hace mis días mucho más especiales.</p>
+        <div class="galeria">
+          <figure class="foto"><img src="assets/foto1.svg" alt="Un recuerdo especial"><figcaption>Un recuerdo bonito</figcaption></figure>
+          <figure class="foto"><img src="assets/foto2.svg" alt="Otro recuerdo especial"><figcaption>Y muchos más por venir</figcaption></figure>
+        </div>
+        <p class="texto-romantico">Y aunque todavía nos quedan muchas historias por vivir, me gustaría que algunas fueran juntos.</p>
+        <button class="boton-principal" id="ir-carta">Hay algo más... <span>🥀</span></button>
+      </div>
+    </section>
+
+    <section id="carta" class="pantalla">
+      <div class="contenido">
+        <p class="subtitulo">UNAS PALABRAS PARA TI</p>
+        <h2>Una carta especial</h2>
+        <button class="sobre" id="sobre" aria-expanded="false" aria-label="Abrir la carta">
+          <span class="sobre-pista">Toca para abrir la carta ♥</span>
+          <span class="carta-interior">
+            <strong>Para Adriana ❤️</strong>
+            <span>Quizás no encuentre las palabras perfectas para expresar todo lo que siento, pero quiero que sepas que eres una persona muy especial para mí.</span>
+            <span>Me gusta tu forma de ser, tu sonrisa y esa manera tan bonita que tienes de hacer especiales hasta los momentos más sencillos.</span>
+            <span>No quiero prometerte un cuento perfecto; quiero construir contigo una historia real, llena de cariño, confianza y momentos felices.</span>
+            <span class="firma-carta">Con mucho cariño,<br>Angel ❤️</span>
+          </span>
+        </button>
+        <button class="boton-principal" id="ir-pregunta">Tengo una pregunta... <span>♥</span></button>
+      </div>
+    </section>
+
+    <section id="pregunta" class="pantalla">
+      <div class="contenido pregunta-contenido">
+        <span class="rosa">🌹</span>
+        <p class="subtitulo">HA LLEGADO EL MOMENTO</p>
+        <h1>Adriana...</h1>
+        <h2 class="pregunta-final">¿Puedo ser tu novio?</h2>
+        <p class="texto-romantico">Me haría muy feliz comenzar esta historia contigo.</p>
+        <div class="botones-respuesta">
+          <button id="respuesta-si" class="boton-si">¡SÍ! ❤️</button>
+          <button id="respuesta-no" class="boton-no">No 🙈</button>
+        </div>
+        <p class="pequeno-texto" id="pista-no">Elige con el corazón.</p>
+      </div>
+    </section>
+
+    <section id="final" class="pantalla">
+      <div class="contenido final-contenido">
+        <span class="corazon-grande">❤️</span>
+        <p class="subtitulo">UNA NUEVA HISTORIA COMIENZA</p>
+        <h1>¡Qué felicidad!</h1>
+        <h2>Ahora comienza nuestra historia 🥀</h2>
+        <p class="texto-romantico">Gracias por darme la oportunidad de compartir momentos especiales contigo.</p>
+        <p class="mensaje-final">Angel <span>♥</span> Adriana</p>
+        <p class="firma">Este es el comienzo de algo bonito...</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
